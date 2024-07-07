@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туториал</title>
+</head>
+<body>
+    <noscript>Включи джавасткрипт</noscript>
+    <button onclick="alert('Ты нажал на кнопку')">Нажми меня</button> <!--кнопка с вшитым js кодом-->
+    <button onclick="button(this)">Хомяк</button> <!--кнопка с вызовом функции-->
+    <button ondblclick="button(this)">даблклик</button>
+    <button onmouseover="button(this)">наведись</button>
+    <button onmouseout="button(this)">отведись</button>
+    
+    <input oninput="input(this)"> 
+
+    <p id="Text" title="Обычный текст">Text</p>
+    <span>Text 1</span>
+    <span class="simple">Text 2</span>
+    <span class="simple">Text 3</span><br><br>
+
+    <form id="mainform" onsubmit="return Form(this)" method="post"> <!--форма с вызовом функции при отправке-->
+        <label for="name">Имя:</label>
+        <input type="text" name="name" placeholder="Имя" id="name"><br><br>
+        <label for="password">Пароль: </label>
+        <input type="password" name="pass" placeholder="Пароль" id="pass"><br><br>
+        <label for="repass">Проверка пароля:</label>
+        <input type="password" name="repass" placeholder="Проверка пароля" id="repass"><br><br>
+        <span>Пол: </span>
+        <input type="radio" name="state" id="male" value="Мужской">
+        <label for="male">Мужской</label>
+        <input type="radio" name="state" id="female" value="Женский">
+        <label for="female">Женский</label><br><br>
+        <div id="error" style="color: red"></div>
+        <input type="submit" name="submit" value="Готово">
+    </form>
+
+
+
+    <script src="js/obj.js"></script>
+</body>
+</html>
